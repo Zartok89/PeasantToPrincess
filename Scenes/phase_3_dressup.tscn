@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c1wyya7gbpirk"]
+
+[ext_resource type="Texture2D" uid="uid://cm2ss7qdixows" path="res://Assets/BaseCharacter/QUEEN_nakey.png" id="1_2r6ws"]
+[ext_resource type="Texture2D" uid="uid://co5maro5wwdnb" path="res://Assets/Dresses/Placeholder_Dress.png" id="2_0ca14"]
+
+[node name="Phase3_Dressup" type="Node" unique_id=1334551469]
+
+[node name="Character" type="Node2D" parent="." unique_id=485698924]
+
+[node name="QueenNakey" type="Sprite2D" parent="Character" unique_id=1725946111]
+position = Vector2(734, 1463)
+texture = ExtResource("1_2r6ws")
+
+[node name="PlaceholderDress" type="Sprite2D" parent="Character/QueenNakey" unique_id=1961410355]
+position = Vector2(25.000122, -1.9999962)
+scale = Vector2(1.0441895, 1.0441895)
+texture = ExtResource("2_0ca14")
