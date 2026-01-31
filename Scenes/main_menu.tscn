@@ -1,0 +1,79 @@
+[gd_scene load_steps=7 format=3 uid="uid://crev2inf1u6xe"]
+
+[ext_resource type="Script" uid="uid://b57j5iq0wfd6x" path="res://Scenes/main_menu.gd" id="1_28flt"]
+[ext_resource type="AudioStream" uid="uid://c4g3glrfeahgt" path="res://Assets/swankyhouse.wav" id="3_1ehe0"]
+[ext_resource type="Script" uid="uid://dvhovivxjqsib" path="res://Scenes/volume_control.gd" id="4_ce3w2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_28flt"]
+bg_color = Color(0.027509721, 0.14497294, 0.038771063, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_1ehe0"]
+grow_end = 0.0
+thickness = 6
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_ce3w2"]
+color = Color(0.6, 0.58431375, 0.25882354, 1)
+thickness = 6
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 7.0
+offset_right = 1.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_28flt")
+
+[node name="Start Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -275.25
+offset_top = -65.25
+offset_right = 277.25
+offset_bottom = 65.25
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 63
+theme_override_styles/normal = SubResource("StyleBoxFlat_28flt")
+text = "Start game"
+
+[node name="Background Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_1ehe0")
+autoplay = true
+
+[node name="Volume Control" type="HSlider" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -272.0
+offset_top = -346.0
+offset_right = 279.0
+offset_bottom = -311.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/slider = SubResource("StyleBoxLine_1ehe0")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_ce3w2")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_ce3w2")
+min_value = -80.0
+max_value = 0.0
+step = 0.1
+script = ExtResource("4_ce3w2")
+audio_bus_name = "Master"
+
+[connection signal="pressed" from="Start Button" to="." method="_on_start_pressed"]
+[connection signal="value_changed" from="Volume Control" to="Volume Control" method="_on_value_changed"]
