@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3iymfukatdij"
-path="res://.godot/imported/Placeholder_Head.png-b43bf3e68571baebdf2389a296fc85e3.ctex"
+uid="uid://cc275aqqhansk"
+path="res://.godot/imported/peasant1_nice.png-d58d3974ff0193e92acf870b19b61adc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/BaseCharacter/Placeholder_Head.png"
-dest_files=["res://.godot/imported/Placeholder_Head.png-b43bf3e68571baebdf2389a296fc85e3.ctex"]
+source_file="res://Assets/BaseCharacter/peasant1_nice.png"
+dest_files=["res://.godot/imported/peasant1_nice.png-d58d3974ff0193e92acf870b19b61adc.ctex"]
 
 [params]
 

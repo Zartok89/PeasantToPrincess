@@ -1,10 +1,14 @@
 [gd_scene format=3 uid="uid://c1wyya7gbpirk"]
 
-[ext_resource type="Texture2D" uid="uid://b3iymfukatdij" path="res://Assets/BaseCharacter/Placeholder_Head.png" id="1_h31tl"]
-[ext_resource type="Texture2D" uid="uid://co5maro5wwdnb" path="res://Assets/Dresses/Placeholder_Dress.png" id="2_0ca14"]
 [ext_resource type="Script" uid="uid://ci1ogwx6h3fgb" path="res://schyte_item.gd" id="3_2vh35"]
-[ext_resource type="Texture2D" uid="uid://g4pc620kb63d" path="res://Assets/Tools/sickletool.png" id="4_h31tl"]
+[ext_resource type="Texture2D" uid="uid://b0p742rp2cl05" path="res://Assets/Tools/sickletoolcoloured.png" id="4_kqr5q"]
 [ext_resource type="Texture2D" uid="uid://djsdaw85t5e78" path="res://Assets/Plagues/cyst.png" id="5_h31tl"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yfqt3"]
+load_path = "res://.godot/imported/Placeholder_Head.png-b43bf3e68571baebdf2389a296fc85e3.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ai0ro"]
+load_path = "res://.godot/imported/Placeholder_Dress.png-ba4347c1c51709ace0d53d7c73a08502.ctex"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0ca14"]
 size = Vector2(205.11996, 170.39891)
@@ -21,13 +25,13 @@ scale = Vector2(0.37708873, 0.37708873)
 [node name="QueenNakey" type="Sprite2D" parent="Character" unique_id=1725946111]
 position = Vector2(731.73914, 1499.1423)
 scale = Vector2(1.2743328, 1.2743328)
-texture = ExtResource("1_h31tl")
+texture = SubResource("CompressedTexture2D_yfqt3")
 
 [node name="PlaceholderDress" type="Sprite2D" parent="Character/QueenNakey" unique_id=1961410355]
 visible = false
 position = Vector2(25.000122, -1.9999962)
 scale = Vector2(1.0441895, 1.0441895)
-texture = ExtResource("2_0ca14")
+texture = SubResource("CompressedTexture2D_ai0ro")
 
 [node name="Schyte" type="Area2D" parent="." unique_id=1210850125]
 position = Vector2(203.00002, 193.00006)
@@ -42,7 +46,7 @@ shape = SubResource("RectangleShape2D_0ca14")
 [node name="Scythe" type="Sprite2D" parent="Schyte" unique_id=145813167]
 position = Vector2(-12.974976, 0)
 scale = Vector2(2.517302, 2.517302)
-texture = ExtResource("4_h31tl")
+texture = ExtResource("4_kqr5q")
 
 [node name="Cysts" type="Node" parent="." unique_id=1355327784]
 
