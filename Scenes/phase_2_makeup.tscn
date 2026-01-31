@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://242wuanbuwxl"]
+
+[ext_resource type="Texture2D" uid="uid://b3iymfukatdij" path="res://Assets/BaseCharacter/Placeholder_Head.png" id="1_tqory"]
+[ext_resource type="Texture2D" uid="uid://co5maro5wwdnb" path="res://Assets/Dresses/Placeholder_Dress.png" id="2_7b4iw"]
+[ext_resource type="Script" uid="uid://ci1ogwx6h3fgb" path="res://schyte_item.gd" id="3_qajad"]
+[ext_resource type="Texture2D" uid="uid://byxq7pont0lct" path="res://Assets/Tools/scythe.png" id="4_bscsq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ca14"]
+size = Vector2(205.11996, 170.39891)
+
+[node name="Phase3_Dressup" type="Node" unique_id=1334551469]
+
+[node name="Character" type="Node2D" parent="." unique_id=485698924]
+position = Vector2(599, -11)
+scale = Vector2(0.37708873, 0.37708873)
+
+[node name="QueenNakey" type="Sprite2D" parent="Character" unique_id=1725946111]
+position = Vector2(731.73914, 1499.1423)
+scale = Vector2(1.2743328, 1.2743328)
+texture = ExtResource("1_tqory")
+
+[node name="PlaceholderDress" type="Sprite2D" parent="Character/QueenNakey" unique_id=1961410355]
+visible = false
+position = Vector2(25.000122, -1.9999962)
+scale = Vector2(1.0441895, 1.0441895)
+texture = ExtResource("2_7b4iw")
+
+[node name="Schyte" type="Area2D" parent="." unique_id=1210850125]
+position = Vector2(203.00002, 193.00006)
+scale = Vector2(0.105, 0.105)
+script = ExtResource("3_qajad")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Schyte" unique_id=156445775]
+position = Vector2(-95.23828, -495.7898)
+scale = Vector2(7.180801, 9.731547)
+shape = SubResource("RectangleShape2D_0ca14")
+
+[node name="Scythe" type="Sprite2D" parent="Schyte" unique_id=145813167]
+position = Vector2(-12.974976, 0)
+scale = Vector2(2.517302, 2.517302)
+texture = ExtResource("4_bscsq")
+
+[connection signal="area_entered" from="Schyte" to="Schyte" method="_on_area_entered"]
