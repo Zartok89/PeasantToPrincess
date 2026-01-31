@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byxq7pont0lct"
-path="res://.godot/imported/scythe.png-31a7b2f8a749996a6cde360e59ea458f.ctex"
+uid="uid://bcxd35calb21f"
+path="res://.godot/imported/leechjarclosedcoloured.png-5de4e7103b21e00b5d106dce1f026c3c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tools/scythe.png"
-dest_files=["res://.godot/imported/scythe.png-31a7b2f8a749996a6cde360e59ea458f.ctex"]
+source_file="res://Assets/Tools/leechjarclosedcoloured.png"
+dest_files=["res://.godot/imported/leechjarclosedcoloured.png-5de4e7103b21e00b5d106dce1f026c3c.ctex"]
 
 [params]
 

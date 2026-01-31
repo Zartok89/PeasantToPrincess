@@ -2,4 +2,4 @@ extends Control
 
 
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://phase_1_skincare.tscn")
+	get_tree().change_scene_to_file("res://Scenes/phase_1_skincare.tscn")

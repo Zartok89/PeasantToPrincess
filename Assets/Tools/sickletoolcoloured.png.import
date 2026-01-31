@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://g4pc620kb63d"
-path="res://.godot/imported/sickletool.png-422b601dd5cf32167a5c664275926548.ctex"
+uid="uid://b0p742rp2cl05"
+path="res://.godot/imported/sickletoolcoloured.png-2fc5f8b88190a332bae48e707ec1ca1a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tools/sickletool.png"
-dest_files=["res://.godot/imported/sickletool.png-422b601dd5cf32167a5c664275926548.ctex"]
+source_file="res://Assets/Tools/sickletoolcoloured.png"
+dest_files=["res://.godot/imported/sickletoolcoloured.png-2fc5f8b88190a332bae48e707ec1ca1a.ctex"]
 
 [params]
 
