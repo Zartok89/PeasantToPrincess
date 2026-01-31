@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://sbsdpkff107t"]
+
+[ext_resource type="AudioStream" uid="uid://c4g3glrfeahgt" path="res://Assets/swankyhouse.wav" id="1_vkvdk"]
+
+[node name="BackgroundMusicPlayer" type="AudioStreamPlayer" unique_id=99106791]
+stream = ExtResource("1_vkvdk")
+autoplay = true

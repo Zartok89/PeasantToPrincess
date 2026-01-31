@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://crev2inf1u6xe"]
+[gd_scene format=3 uid="uid://crev2inf1u6xe"]
 
 [ext_resource type="Script" uid="uid://b57j5iq0wfd6x" path="res://Scenes/main_menu.gd" id="1_28flt"]
-[ext_resource type="AudioStream" uid="uid://c4g3glrfeahgt" path="res://Assets/swankyhouse.wav" id="3_1ehe0"]
 [ext_resource type="Script" uid="uid://dvhovivxjqsib" path="res://Scenes/volume_control.gd" id="4_ce3w2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_28flt"]
@@ -19,7 +18,7 @@ thickness = 6
 color = Color(0.6, 0.58431375, 0.25882354, 1)
 thickness = 6
 
-[node name="MainMenu" type="Control"]
+[node name="MainMenu" type="Control" unique_id=343475347]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -32,7 +31,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_28flt")
 
-[node name="Start Button" type="Button" parent="."]
+[node name="Start Button" type="Button" parent="." unique_id=387890101]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -49,11 +48,7 @@ theme_override_font_sizes/font_size = 63
 theme_override_styles/normal = SubResource("StyleBoxFlat_28flt")
 text = "Start game"
 
-[node name="Background Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_1ehe0")
-autoplay = true
-
-[node name="Volume Control" type="HSlider" parent="."]
+[node name="Volume Control" type="HSlider" parent="." unique_id=235878721]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
