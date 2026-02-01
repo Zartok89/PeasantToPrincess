@@ -10,6 +10,8 @@
 [ext_resource type="Script" uid="uid://c4b3ptcemdxnm" path="res://Scenes/cysts.gd" id="8_jhtid"]
 [ext_resource type="Texture2D" uid="uid://rjds2jyvordt" path="res://Assets/Plagues/wound1.png" id="9_o1bhg"]
 [ext_resource type="Texture2D" uid="uid://c4mj1enrq40en" path="res://Assets/Plagues/wound2.png" id="10_otapy"]
+[ext_resource type="Texture2D" uid="uid://b23jn2gtrvg6g" path="res://Assets/before.png" id="11_usja0"]
+[ext_resource type="Texture2D" uid="uid://mikgdr444ws2" path="res://Assets/After.png" id="12_tjg3o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_do63o"]
 size = Vector2(76.5, 73.5)
@@ -297,3 +299,13 @@ shape = SubResource("RectangleShape2D_do63o")
 [node name="Cyst" type="Sprite2D" parent="Cysts/Cyst12" unique_id=1550320747]
 scale = Vector2(0.98587954, 0.98520327)
 texture = ExtResource("10_otapy")
+
+[node name="Before" type="Sprite2D" parent="." unique_id=1658307465]
+position = Vector2(427, 107)
+scale = Vector2(0.43760538, 0.43760538)
+texture = ExtResource("11_usja0")
+
+[node name="After" type="Sprite2D" parent="." unique_id=501061817]
+position = Vector2(1475.0001, 71.00003)
+scale = Vector2(0.31419224, 0.31419224)
+texture = ExtResource("12_tjg3o")

@@ -35,12 +35,14 @@ func _on_area_entered(area):
 func _trigger_next_function():
 	if nice_face:
 		nice_face.visible = true
-		await get_tree().create_timer(5.0).timeout
-		get_tree().change_scene_to_file("res://Scenes/phase_4_BeforeAfter.tscn")
-		queue_free()
 		
 	if nice_face2:
 		nice_face2.visible = true
 		
 	self.visible = false
 	is_held = false
+	
+	await get_tree().create_timer(3.0).timeout
+	get_tree().change_scene_to_file("res://Scenes/phase_3_dressup.tscn")
+	queue_free()
+		
