@@ -39,10 +39,11 @@ anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = -2.0
 offset_top = -1101.0
-offset_right = 663.0
+offset_right = 433.0
 offset_bottom = -6.0
 grow_vertical = 0
 texture = ExtResource("2_vuv36")
+expand_mode = 1
 
 [node name="StretchTable" type="TextureRect" parent="." unique_id=1468883528]
 anchors_preset = 2
@@ -295,8 +296,8 @@ scale = Vector2(0.98587954, 0.98520327)
 texture = ExtResource("4_ai0ro")
 
 [node name="Schyte" type="Area2D" parent="." unique_id=1210850125]
-position = Vector2(129.00003, 309)
-scale = Vector2(0.105, 0.105)
+position = Vector2(204, 313)
+scale = Vector2(0.09096495, 0.09096495)
 script = ExtResource("3_2vh35")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Schyte" unique_id=156445775]

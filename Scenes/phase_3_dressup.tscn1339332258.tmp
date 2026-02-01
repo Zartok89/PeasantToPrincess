@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://mxj2ex0frql0"]
+
+[ext_resource type="Texture2D" uid="uid://rxtg327lvccx" path="res://Assets/MainMenu/bg.png" id="1_kegg6"]
+[ext_resource type="Texture2D" uid="uid://hysbvfp0c8wn" path="res://Assets/BaseCharacter/full_body.png" id="3_2vh35"]
+[ext_resource type="Texture2D" uid="uid://kroadxfxs6y1" path="res://Assets/button1.png" id="3_dy6ms"]
+[ext_resource type="Texture2D" uid="uid://18mhuvippgwk" path="res://Assets/stretch_bench.png" id="3_qsbxe"]
+[ext_resource type="Texture2D" uid="uid://b88xqlckib8uo" path="res://Assets/button2.png" id="5_5kpi1"]
+[ext_resource type="Texture2D" uid="uid://csuhyilxeqy5o" path="res://Assets/button3.png" id="7_6mk6t"]
+
+[sub_resource type="GDScript" id="GDScript_u75eu"]
+script/source = "extends Control
+
+# Declare button nodes
+@onready var button_A = $ButtonEnding1
+@onready var button_B = $ButtonEnding2
+@onready var button_C = $ButtonEnding3
+
+func _ready():
+	# Connect signals
+	#button_A.connect(\"down\", self, \"_on_button_A_down\")
+	#button_B.connect(\"down\", self, \"_on_button_B_down\")
+	#button_C.connect(\"down\", self, \"_on_button_C_down\")
+
+# Handle button press and change scene
+func _on_button_A_down():
+	get_tree().change_scene(\"res://Scenes/phase_4_BeforeAfter_A.tscn\")
+
+func _on_button_B_down():
+	get_tree().change_scene(\"res://Scenes/phase_4_BeforeAfter_B.tscn\")
+
+func _on_button_C_down():
+	get_tree().change_scene(\"res://Scenes/phase_4_BeforeAfter_C.tscn\")
+"
+
+[node name="Phase3_Dressup" type="Node" unique_id=1334551469]
+script = SubResource("GDScript_u75eu")
+
+[node name="Background" type="TextureRect" parent="." unique_id=230172077]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_kegg6")
+
+[node name="Table" type="TextureRect" parent="." unique_id=61646758]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1277.0
+offset_top = -4.0
+offset_right = 1277.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.26596722, 1.0044426)
+texture = ExtResource("3_qsbxe")
+
+[node name="Dressup A" type="TextureButton" parent="." unique_id=359827465]
+offset_left = -4.0
+offset_top = 254.99998
+offset_right = 596.0
+offset_bottom = 1055.0
+scale = Vector2(0.78907716, 0.7852025)
+texture_normal = ExtResource("3_dy6ms")
+
+[node name="Dressup B" type="TextureButton" parent="." unique_id=1579798359]
+offset_left = 389.99997
+offset_top = 254.0
+offset_right = 990.0
+offset_bottom = 1054.0
+scale = Vector2(0.7773224, 0.79007155)
+texture_normal = ExtResource("5_5kpi1")
+
+[node name="Dressup C" type="TextureButton" parent="." unique_id=959330995]
+offset_left = 798.0
+offset_top = 260.0
+offset_right = 1398.0
+offset_bottom = 1060.0
+scale = Vector2(0.7699009, 0.7723154)
+texture_normal = ExtResource("7_6mk6t")
+
+[node name="Character" type="Node2D" parent="." unique_id=485698924]
+position = Vector2(708, 165)
+scale = Vector2(0.17217892, 0.17217892)
+
+[node name="Peasant" type="Sprite2D" parent="Character" unique_id=1725946111 groups=["face"]]
+position = Vector2(4884.454, 2305.7415)
+scale = Vector2(5.910613, 5.910613)
+texture = ExtResource("3_2vh35")
+
+[connection signal="button_down" from="Dressup A" to="Dressup A" method="_on_button_down"]
+[connection signal="button_down" from="Dressup B" to="Dressup B" method="_on_button_down"]
+[connection signal="button_down" from="Dressup C" to="Dressup C" method="_on_button_down"]

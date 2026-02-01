@@ -1,0 +1,114 @@
+[gd_scene format=3 uid="uid://bd3d5lxwxs0te"]
+
+[ext_resource type="Texture2D" uid="uid://rxtg327lvccx" path="res://Assets/MainMenu/bg.png" id="1_puoov"]
+[ext_resource type="Texture2D" uid="uid://coj6ero4vk8qw" path="res://Assets/ironslayethgold.png" id="2_rbc05"]
+[ext_resource type="Texture2D" uid="uid://cdo0cg7ycxs44" path="res://Assets/BaseCharacter/body2.png" id="3_4hkom"]
+[ext_resource type="Texture2D" uid="uid://corgipojxeepl" path="res://Assets/Clothing/dress3shaded.png" id="6_puoov"]
+[ext_resource type="Texture2D" uid="uid://b23jn2gtrvg6g" path="res://Assets/before.png" id="7_be2u6"]
+[ext_resource type="Texture2D" uid="uid://qiir6mqp68bn" path="res://Assets/Clothing/hair3.png" id="7_rbc05"]
+[ext_resource type="Texture2D" uid="uid://dcxwop5qw3mte" path="res://Assets/Clothing/crown_3.png" id="8_4hkom"]
+[ext_resource type="Texture2D" uid="uid://mikgdr444ws2" path="res://Assets/After.png" id="8_h2hs5"]
+[ext_resource type="Texture2D" uid="uid://nuwqboy3j7et" path="res://Assets/Again.png" id="9_4u20b"]
+[ext_resource type="Texture2D" uid="uid://dyvv1wamqfb5o" path="res://Assets/Illustration5.png" id="9_rbc05"]
+[ext_resource type="Texture2D" uid="uid://mm3w3e1be66b" path="res://Assets/Done.png" id="10_6l4ii"]
+[ext_resource type="Texture2D" uid="uid://8w2j8dmnc3wu" path="res://Assets/BaseCharacter/peasant_before.png" id="11_84dx5"]
+
+[sub_resource type="GDScript" id="GDScript_4lu72"]
+resource_name = "PlayAgain"
+script/source = "extends TextureButton
+
+func _pressed():
+	get_tree().change_scene_to_file(\"res://Scenes/phase_1_skincare.tscn\")
+"
+
+[sub_resource type="GDScript" id="GDScript_do63o"]
+resource_name = "Done"
+script/source = "extends TextureButton
+
+func _pressed():
+	get_tree().quit()
+"
+
+[node name="Phase4_showcase" type="Node" unique_id=1334551469]
+
+[node name="Background" type="TextureRect" parent="." unique_id=45555657]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_puoov")
+
+[node name="Ironslayeth" type="Sprite2D" parent="Background" unique_id=498068931]
+modulate = Color(0.7507996, 0.7507996, 0.7507996, 1)
+position = Vector2(980.99994, 614)
+scale = Vector2(0.6853304, 0.6853304)
+texture = ExtResource("2_rbc05")
+
+[node name="Before" type="Sprite2D" parent="." unique_id=337573237]
+position = Vector2(393, 96)
+rotation = 0.3286037
+scale = Vector2(0.43760538, 0.43760538)
+texture = ExtResource("7_be2u6")
+
+[node name="After" type="Sprite2D" parent="." unique_id=1178258297]
+position = Vector2(1521, 100)
+scale = Vector2(0.4386503, 0.44221112)
+texture = ExtResource("8_h2hs5")
+
+[node name="Body2" type="Sprite2D" parent="." unique_id=1997237753]
+position = Vector2(1509.0001, 585.00006)
+scale = Vector2(0.909811, 0.909811)
+texture = ExtResource("3_4hkom")
+
+[node name="Dress1Shaded" type="Sprite2D" parent="Body2" unique_id=1429993301]
+position = Vector2(34, 8)
+scale = Vector2(0.79408956, 0.79408956)
+texture = ExtResource("6_puoov")
+
+[node name="Hair1" type="Sprite2D" parent="Body2" unique_id=1333854066]
+position = Vector2(29.381958, -4.8970337)
+scale = Vector2(0.7673133, 0.7673133)
+texture = ExtResource("7_rbc05")
+
+[node name="Crown1" type="Sprite2D" parent="Body2" unique_id=58167525]
+position = Vector2(33.05481, 17.139526)
+scale = Vector2(0.78834397, 0.78834397)
+texture = ExtResource("8_4hkom")
+
+[node name="Illustration5" type="Sprite2D" parent="Body2" unique_id=1518352876]
+modulate = Color(1.3945211, 1.3945211, 1.3945211, 1)
+position = Vector2(-601.2239, -352.8206)
+scale = Vector2(1.1630697, 1.1630697)
+texture = ExtResource("9_rbc05")
+
+[node name="Play Again" type="TextureButton" parent="." unique_id=1755000059]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 714.0
+offset_top = -622.0
+offset_right = 1692.0
+offset_bottom = -224.0
+grow_vertical = 0
+scale = Vector2(0.50229627, 0.44271973)
+texture_normal = ExtResource("9_4u20b")
+script = SubResource("GDScript_4lu72")
+
+[node name="Done" type="TextureButton" parent="." unique_id=972360896]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 714.0
+offset_top = -378.99994
+offset_right = 1692.0
+offset_bottom = 221.0
+grow_vertical = 0
+scale = Vector2(0.50229627, 0.44271973)
+texture_normal = ExtResource("10_6l4ii")
+script = SubResource("GDScript_do63o")
+
+[node name="PeasantBefore" type="Sprite2D" parent="." unique_id=1805112509]
+position = Vector2(388.99997, 604)
+scale = Vector2(0.9476561, 0.9476561)
+texture = ExtResource("11_84dx5")

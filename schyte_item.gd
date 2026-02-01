@@ -38,5 +38,5 @@ func _trigger_next_function():
 	self.visible = false
 	is_held = false
 	print("Triggered next function: 12 cysts hidden.")
-	var next_scene_path := "res://Scenes/phase_2_makeup.tscn"
+	var next_scene_path := "res://Scenes/intro3.tscn"
 	get_tree().change_scene_to_file(next_scene_path)
