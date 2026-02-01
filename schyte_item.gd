@@ -4,7 +4,7 @@ var is_held := false
 var offset := Vector2.ZERO
 
 var hidden_count := 0
-const REQUIRED_HIDES := 5
+const REQUIRED_HIDES := 12
 const TARGET_GROUP := "Cysts"
 
 func _ready():
@@ -38,6 +38,6 @@ func _check_trigger_next():
 func _trigger_next_function():
 	self.visible = false
 	is_held = false
-	print("Triggered next function: 5 cysts hidden.")
+	print("Triggered next function: 12 cysts hidden.")
 	var next_scene_path := "res://Scenes/phase_2_makeup.tscn"
 	get_tree().change_scene_to_file(next_scene_path)

@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://242wuanbuwxl"]
 
 [ext_resource type="Texture2D" uid="uid://buay0ppkl8sw" path="res://Assets/BaseCharacter/peasant1.png" id="1_c2wo7"]
+[ext_resource type="Texture2D" uid="uid://rxtg327lvccx" path="res://Assets/MainMenu/bg.png" id="1_tqory"]
+[ext_resource type="Texture2D" uid="uid://x80kuuuq48pd" path="res://Assets/rack.png" id="2_qajad"]
 [ext_resource type="Script" uid="uid://blqudvgtrbfar" path="res://Scenes/makeup.gd" id="3_bscsq"]
-[ext_resource type="Texture2D" uid="uid://bxpxhyd0yrah4" path="res://Assets/Tools/torturemaskcoloured.png" id="4_bscsq"]
+[ext_resource type="Texture2D" uid="uid://18mhuvippgwk" path="res://Assets/stretch_bench.png" id="3_l0uac"]
+[ext_resource type="Texture2D" uid="uid://5w4l5mg7a4db" path="res://Assets/Tools/torturemaskshaded.png" id="4_bscsq"]
 [ext_resource type="Texture2D" uid="uid://cc275aqqhansk" path="res://Assets/BaseCharacter/peasant1_nice.png" id="4_tqory"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bscsq"]
@@ -12,6 +15,37 @@ size = Vector2(689.493, 861.8663)
 size = Vector2(185.06406, 221.19933)
 
 [node name="Phase3_Dressup" type="Node" unique_id=1334551469]
+
+[node name="Background" type="TextureRect" parent="." unique_id=230172077]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_tqory")
+
+[node name="Rack" type="TextureRect" parent="." unique_id=1494099567]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = -1101.0
+offset_right = 663.0
+offset_bottom = -6.0
+grow_vertical = 0
+texture = ExtResource("2_qajad")
+
+[node name="StretchTable" type="TextureRect" parent="." unique_id=29064717]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 382.0
+offset_top = -1218.0
+offset_right = 1047.0
+offset_bottom = -123.0
+grow_vertical = 0
+scale = Vector2(1.8115492, 1.3858279)
+texture = ExtResource("3_l0uac")
 
 [node name="Character" type="Node2D" parent="." unique_id=485698924]
 position = Vector2(708, 63)
@@ -29,7 +63,7 @@ scale = Vector2(5.852516, 5.896535)
 texture = ExtResource("4_tqory")
 
 [node name="Area2D" type="Area2D" parent="Character" unique_id=188009309 groups=["face"]]
-position = Vector2(13.2595215, 2206.3772)
+position = Vector2(14.832995, 2195.2878)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Character/Area2D" unique_id=1491269843]
 position = Vector2(1282.158, -841.73895)
@@ -41,7 +75,7 @@ position = Vector2(297, 331.99997)
 scale = Vector2(0.14601523, 0.1495703)
 script = ExtResource("3_bscsq")
 
-[node name="MakeupImage" type="Sprite2D" parent="Makeup" unique_id=145813167]
+[node name="TortureMask" type="Sprite2D" parent="Makeup" unique_id=145813167]
 position = Vector2(-12.974976, 0)
 scale = Vector2(2.517302, 2.517302)
 texture = ExtResource("4_bscsq")
