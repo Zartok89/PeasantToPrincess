@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://cjeiay65qs8ey" path="res://Assets/MainMenu/plague_doctor.png" id="3_trj04"]
 [ext_resource type="Script" uid="uid://dvhovivxjqsib" path="res://Scenes/volume_control.gd" id="4_ce3w2"]
 [ext_resource type="Texture2D" uid="uid://dkyxt6j1xwl4w" path="res://Assets/MainMenu/playbutton.png" id="6_16hvj"]
-[ext_resource type="Texture2D" uid="uid://na4mpdbtm15h" path="res://Assets/startscreen2.png" id="6_yhxw7"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_1ehe0"]
 grow_end = 0.0
@@ -77,14 +76,9 @@ offset_right = -745.0
 offset_bottom = -265.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.92675686, 0.92540234)
 texture = ExtResource("3_ce3w2")
 expand_mode = 1
-
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1261381417]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("6_yhxw7")
 
 [node name="Volume Control" type="HSlider" parent="." unique_id=235878721]
 layout_mode = 1
@@ -94,9 +88,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -928.0
-offset_top = -356.0
+offset_top = -301.0
 offset_right = -377.0
-offset_bottom = -321.0
+offset_bottom = -266.0
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(1.1135136, 3.5280485)

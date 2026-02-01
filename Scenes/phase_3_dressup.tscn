@@ -3,9 +3,17 @@
 [ext_resource type="Texture2D" uid="uid://rxtg327lvccx" path="res://Assets/MainMenu/bg.png" id="1_kegg6"]
 [ext_resource type="Texture2D" uid="uid://hysbvfp0c8wn" path="res://Assets/BaseCharacter/full_body.png" id="3_2vh35"]
 [ext_resource type="Texture2D" uid="uid://18mhuvippgwk" path="res://Assets/stretch_bench.png" id="3_qsbxe"]
-[ext_resource type="Script" uid="uid://cdypefmotjr2x" path="res://Scenes/dressup_a.gd" id="4_2vh35"]
-[ext_resource type="Script" uid="uid://d0qwi7hyowrao" path="res://Scenes/dressup_b.gd" id="5_h31tl"]
-[ext_resource type="Script" uid="uid://cthgmsml4gbpk" path="res://Scenes/dressup_c.gd" id="6_u75eu"]
+[ext_resource type="Script" path="res://Scenes/dressup_a.gd" id="4_2vh35"]
+[ext_resource type="Script" path="res://Scenes/dressup_b.gd" id="5_h31tl"]
+[ext_resource type="Script" path="res://Scenes/dressup_c.gd" id="6_u75eu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u75eu"]
+bg_color = Color(0.58431375, 0.6, 0.2784314, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+corner_detail = 20
 
 [node name="Phase3_Dressup" type="Node" unique_id=1334551469]
 
@@ -30,6 +38,40 @@ grow_vertical = 2
 scale = Vector2(0.26596722, 1.0044426)
 texture = ExtResource("3_qsbxe")
 
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=208988519]
+offset_left = 303.0
+offset_top = 351.0
+offset_right = 343.0
+offset_bottom = 391.0
+scale = Vector2(6.3182654, 4.829985)
+
+[node name="Dressup A" type="Button" parent="VBoxContainer" unique_id=1272511341]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_u75eu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_u75eu")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_u75eu")
+theme_override_styles/focus = SubResource("StyleBoxFlat_u75eu")
+text = "Dressup A"
+script = ExtResource("4_2vh35")
+
+[node name="Dressup B" type="Button" parent="VBoxContainer" unique_id=273363729]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_u75eu")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_u75eu")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_u75eu")
+theme_override_styles/focus = SubResource("StyleBoxFlat_u75eu")
+text = "Dressup B "
+script = ExtResource("5_h31tl")
+
+[node name="Dressup C" type="Button" parent="VBoxContainer" unique_id=1565865550]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_u75eu")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_u75eu")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_u75eu")
+theme_override_styles/focus = SubResource("StyleBoxFlat_u75eu")
+text = "Dressup C"
+script = ExtResource("6_u75eu")
+
 [node name="Character" type="Node2D" parent="." unique_id=485698924]
 position = Vector2(708, 165)
 scale = Vector2(0.17217892, 0.17217892)
@@ -39,30 +81,6 @@ position = Vector2(4884.454, 2305.7415)
 scale = Vector2(5.910613, 5.910613)
 texture = ExtResource("3_2vh35")
 
-[node name="Dressup A" type="Button" parent="." unique_id=1272511341]
-offset_left = 313.0
-offset_top = 211.0
-offset_right = 321.0
-offset_bottom = 219.0
-text = "Dressup A"
-script = ExtResource("4_2vh35")
-
-[node name="Dressup B" type="Button" parent="." unique_id=273363729]
-offset_left = 313.0
-offset_top = 286.0
-offset_right = 400.0
-offset_bottom = 317.0
-text = "Dressup B "
-script = ExtResource("5_h31tl")
-
-[node name="Dressup C" type="Button" parent="." unique_id=1565865550]
-offset_left = 313.0
-offset_top = 353.0
-offset_right = 400.0
-offset_bottom = 384.0
-text = "Dressup C"
-script = ExtResource("6_u75eu")
-
-[connection signal="button_down" from="Dressup A" to="Dressup A" method="_on_button_down"]
-[connection signal="button_down" from="Dressup B" to="Dressup B" method="_on_button_down"]
-[connection signal="button_down" from="Dressup C" to="Dressup C" method="_on_button_down"]
+[connection signal="button_down" from="VBoxContainer/Dressup A" to="VBoxContainer/Dressup A" method="_on_button_down"]
+[connection signal="button_down" from="VBoxContainer/Dressup B" to="VBoxContainer/Dressup B" method="_on_button_down"]
+[connection signal="button_down" from="VBoxContainer/Dressup C" to="VBoxContainer/Dressup C" method="_on_button_down"]

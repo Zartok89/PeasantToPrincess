@@ -12,9 +12,27 @@
 [ext_resource type="Texture2D" uid="uid://c4mj1enrq40en" path="res://Assets/Plagues/wound2.png" id="10_682qd"]
 [ext_resource type="Texture2D" uid="uid://b23jn2gtrvg6g" path="res://Assets/before.png" id="11_g3iao"]
 [ext_resource type="Texture2D" uid="uid://mikgdr444ws2" path="res://Assets/After.png" id="12_suy00"]
+[ext_resource type="Texture2D" uid="uid://nuwqboy3j7et" path="res://Assets/Again.png" id="13_cpepx"]
+[ext_resource type="Texture2D" uid="uid://mm3w3e1be66b" path="res://Assets/Done.png" id="14_3xhv5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_do63o"]
 size = Vector2(76.5, 73.5)
+
+[sub_resource type="GDScript" id="GDScript_iy255"]
+resource_name = "PlayAgain"
+script/source = "extends TextureButton
+
+func _pressed():
+	get_tree().change_scene_to_file(\"res://Scenes/phase_1_skincare.tscn\")
+"
+
+[sub_resource type="GDScript" id="GDScript_682qd"]
+resource_name = "Done"
+script/source = "extends TextureButton
+
+func _pressed():
+	get_tree().quit()
+"
 
 [node name="Phase3_Dressup" type="Node" unique_id=1334551469]
 
@@ -308,3 +326,29 @@ texture = ExtResource("11_g3iao")
 position = Vector2(1475.0001, 71.00003)
 scale = Vector2(0.31419224, 0.31419224)
 texture = ExtResource("12_suy00")
+
+[node name="Play Again" type="TextureButton" parent="." unique_id=2087971115]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 775.0
+offset_top = -470.0
+offset_right = 1753.0
+offset_bottom = -72.0
+grow_vertical = 0
+scale = Vector2(0.6202703, 0.5467011)
+texture_normal = ExtResource("13_cpepx")
+script = SubResource("GDScript_iy255")
+
+[node name="Done" type="TextureButton" parent="." unique_id=1396249238]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 775.0
+offset_top = -226.99994
+offset_right = 1753.0
+offset_bottom = 373.0
+grow_vertical = 0
+scale = Vector2(0.6202703, 0.5467011)
+texture_normal = ExtResource("14_3xhv5")
+script = SubResource("GDScript_682qd")
