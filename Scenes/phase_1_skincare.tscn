@@ -10,12 +10,16 @@
 [ext_resource type="Script" uid="uid://c4b3ptcemdxnm" path="res://Scenes/cysts.gd" id="4_kqr5q"]
 [ext_resource type="Texture2D" uid="uid://c1lqt02qnptq3" path="res://Assets/Tools/leechjarshadedclosed.png" id="7_g46s1"]
 [ext_resource type="Texture2D" uid="uid://3n3njt4s3eqy" path="res://Assets/Tools/potionbottleshaded.png" id="8_g46s1"]
+[ext_resource type="Texture2D" uid="uid://rjds2jyvordt" path="res://Assets/Plagues/wound1.png" id="10_13kqj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0ca14"]
-size = Vector2(205.11996, 170.39891)
+size = Vector2(205.11996, 197.74457)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h31tl"]
 size = Vector2(76.5, 73.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_13kqj"]
+size = Vector2(7.6289377, 20)
 
 [node name="Phase3_Dressup" type="Node" unique_id=1334551469]
 
@@ -61,22 +65,8 @@ position = Vector2(1742.2954, 1909.3652)
 scale = Vector2(3.911, 3.911)
 texture = ExtResource("1_ai0ro")
 
-[node name="Schyte" type="Area2D" parent="." unique_id=1210850125]
-position = Vector2(129.00003, 309)
-scale = Vector2(0.105, 0.105)
-script = ExtResource("3_2vh35")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Schyte" unique_id=156445775]
-position = Vector2(-95.23828, 942.85645)
-scale = Vector2(7.180801, 9.731547)
-shape = SubResource("RectangleShape2D_0ca14")
-
-[node name="Scythe" type="Sprite2D" parent="Schyte" unique_id=145813167]
-position = Vector2(-12.974976, 0)
-scale = Vector2(2.517302, 2.517302)
-texture = ExtResource("3_ai0ro")
-
 [node name="LeechesJar" type="Area2D" parent="." unique_id=37703151]
+visible = false
 position = Vector2(489.00003, 302.00003)
 scale = Vector2(0.105, 0.105)
 
@@ -91,6 +81,7 @@ scale = Vector2(2.517302, 2.517302)
 texture = ExtResource("7_g46s1")
 
 [node name="Potion" type="Area2D" parent="." unique_id=1727938322]
+visible = false
 position = Vector2(137.00002, 659.00006)
 scale = Vector2(0.105, 0.105)
 
@@ -107,114 +98,230 @@ texture = ExtResource("8_g46s1")
 [node name="Cysts" type="Node" parent="." unique_id=1355327784]
 script = ExtResource("4_kqr5q")
 
+[node name="Sprite2D" type="Sprite2D" parent="Cysts" unique_id=531425262]
+position = Vector2(1344, 474.00003)
+texture = ExtResource("10_13kqj")
+
 [node name="Cyst" type="Area2D" parent="Cysts" unique_id=628624922 groups=["Cysts"]]
 position = Vector2(1344, 474.00003)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cysts/Cyst" unique_id=2091003935]
+position = Vector2(0, -1.0000305)
+scale = Vector2(0.32, 0.32)
 shape = SubResource("RectangleShape2D_h31tl")
 
 [node name="Cyst" type="Sprite2D" parent="Cysts/Cyst" unique_id=848992379]
 texture = ExtResource("4_ai0ro")
 
-[node name="Cyst2" type="Area2D" parent="Cysts" unique_id=1891764307 groups=["Cysts"]]
-position = Vector2(1303, 605)
+[node name="Sprite2D2" type="Sprite2D" parent="Cysts" unique_id=1581430565]
+position = Vector2(1197, 510)
+texture = ExtResource("10_13kqj")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cysts/Cyst2" unique_id=1730007420]
+[node name="Cyst2" type="Area2D" parent="Cysts" unique_id=334046582 groups=["Cysts"]]
+position = Vector2(1197, 510)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cysts/Cyst2" unique_id=832613681]
+position = Vector2(0, -1.0000305)
+scale = Vector2(0.32, 0.32)
 shape = SubResource("RectangleShape2D_h31tl")
 
-[node name="Cyst" type="Sprite2D" parent="Cysts/Cyst2" unique_id=1123975872]
+[node name="Cyst" type="Sprite2D" parent="Cysts/Cyst2" unique_id=2087183539]
 texture = ExtResource("4_ai0ro")
 
-[node name="Cyst3" type="Area2D" parent="Cysts" unique_id=1085838819 groups=["Cysts"]]
-position = Vector2(1173, 568)
+[node name="Sprite2D3" type="Sprite2D" parent="Cysts" unique_id=238823921]
+position = Vector2(1260, 363)
+texture = ExtResource("10_13kqj")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cysts/Cyst3" unique_id=1064197524]
+[node name="Cyst3" type="Area2D" parent="Cysts" unique_id=110011524 groups=["Cysts"]]
+position = Vector2(1260, 363)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cysts/Cyst3" unique_id=1400695297]
+position = Vector2(0, -1.0000305)
+scale = Vector2(0.32, 0.32)
 shape = SubResource("RectangleShape2D_h31tl")
 
-[node name="Cyst" type="Sprite2D" parent="Cysts/Cyst3" unique_id=1393038306]
+[node name="Cyst" type="Sprite2D" parent="Cysts/Cyst3" unique_id=395366457]
 texture = ExtResource("4_ai0ro")
 
-[node name="Cyst4" type="Area2D" parent="Cysts" unique_id=1019125082 groups=["Cysts"]]
-position = Vector2(1173, 358)
+[node name="Sprite2D4" type="Sprite2D" parent="Cysts" unique_id=1009688410]
+position = Vector2(999, 642)
+texture = ExtResource("10_13kqj")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cysts/Cyst4" unique_id=356302179]
+[node name="Cyst4" type="Area2D" parent="Cysts" unique_id=592429340 groups=["Cysts"]]
+position = Vector2(999, 642)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cysts/Cyst4" unique_id=1598817055]
+position = Vector2(0, -1.0000305)
+scale = Vector2(0.32, 0.32)
 shape = SubResource("RectangleShape2D_h31tl")
 
-[node name="Cyst" type="Sprite2D" parent="Cysts/Cyst4" unique_id=952835023]
+[node name="Cyst" type="Sprite2D" parent="Cysts/Cyst4" unique_id=1929295045]
 texture = ExtResource("4_ai0ro")
 
-[node name="Cyst5" type="Area2D" parent="Cysts" unique_id=1458504594 groups=["Cysts"]]
-position = Vector2(1338, 922)
+[node name="Sprite2D5" type="Sprite2D" parent="Cysts" unique_id=1640603138]
+position = Vector2(880, 307)
+texture = ExtResource("10_13kqj")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cysts/Cyst5" unique_id=612831728]
+[node name="Cyst5" type="Area2D" parent="Cysts" unique_id=1378945959 groups=["Cysts"]]
+position = Vector2(880, 307)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cysts/Cyst5" unique_id=1202890280]
+position = Vector2(0, -1.0000305)
+scale = Vector2(0.32, 0.32)
 shape = SubResource("RectangleShape2D_h31tl")
 
-[node name="Cyst" type="Sprite2D" parent="Cysts/Cyst5" unique_id=481653421]
+[node name="Cyst" type="Sprite2D" parent="Cysts/Cyst5" unique_id=410187226]
 texture = ExtResource("4_ai0ro")
 
-[node name="Cyst6" type="Area2D" parent="Cysts" unique_id=765577289 groups=["Cysts"]]
-position = Vector2(1215, 912)
+[node name="Sprite2D6" type="Sprite2D" parent="Cysts" unique_id=1863734827]
+position = Vector2(1632, 352)
+texture = ExtResource("10_13kqj")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cysts/Cyst6" unique_id=25654632]
+[node name="Cyst6" type="Area2D" parent="Cysts" unique_id=812192307 groups=["Cysts"]]
+position = Vector2(1632, 352)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cysts/Cyst6" unique_id=471323559]
+position = Vector2(0, -1.0000305)
+scale = Vector2(0.32, 0.32)
 shape = SubResource("RectangleShape2D_h31tl")
 
-[node name="Cyst" type="Sprite2D" parent="Cysts/Cyst6" unique_id=809575773]
+[node name="Cyst" type="Sprite2D" parent="Cysts/Cyst6" unique_id=1635220765]
 texture = ExtResource("4_ai0ro")
 
-[node name="Cyst7" type="Area2D" parent="Cysts" unique_id=850852036 groups=["Cysts"]]
-position = Vector2(1173, 796)
+[node name="Sprite2D7" type="Sprite2D" parent="Cysts" unique_id=75410663]
+position = Vector2(1553, 481)
+texture = ExtResource("10_13kqj")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cysts/Cyst7" unique_id=2031355619]
+[node name="Cyst7" type="Area2D" parent="Cysts" unique_id=1068170676 groups=["Cysts"]]
+position = Vector2(1553, 481)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cysts/Cyst7" unique_id=1966508414]
+position = Vector2(0, -1.0000305)
+scale = Vector2(0.32, 0.32)
 shape = SubResource("RectangleShape2D_h31tl")
 
-[node name="Cyst" type="Sprite2D" parent="Cysts/Cyst7" unique_id=1607281537]
+[node name="Cyst" type="Sprite2D" parent="Cysts/Cyst7" unique_id=1495860954]
 texture = ExtResource("4_ai0ro")
 
-[node name="Cyst8" type="Area2D" parent="Cysts" unique_id=1187882968 groups=["Cysts"]]
-position = Vector2(1566, 358)
+[node name="Sprite2D8" type="Sprite2D" parent="Cysts" unique_id=1831663355]
+position = Vector2(1429, 795)
+texture = ExtResource("10_13kqj")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cysts/Cyst8" unique_id=235653575]
+[node name="Cyst8" type="Area2D" parent="Cysts" unique_id=2017262598 groups=["Cysts"]]
+position = Vector2(1429, 795)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cysts/Cyst8" unique_id=1306305107]
+position = Vector2(0, -1.0000305)
+scale = Vector2(0.32, 0.32)
 shape = SubResource("RectangleShape2D_h31tl")
 
-[node name="Cyst" type="Sprite2D" parent="Cysts/Cyst8" unique_id=1277521771]
+[node name="Cyst" type="Sprite2D" parent="Cysts/Cyst8" unique_id=1883807964]
 texture = ExtResource("4_ai0ro")
 
-[node name="Cyst9" type="Area2D" parent="Cysts" unique_id=848071674 groups=["Cysts"]]
-position = Vector2(947, 372)
+[node name="Sprite2D9" type="Sprite2D" parent="Cysts" unique_id=1794974030]
+position = Vector2(1124, 830)
+texture = ExtResource("10_13kqj")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cysts/Cyst9" unique_id=1562058032]
+[node name="Cyst9" type="Area2D" parent="Cysts" unique_id=557042448 groups=["Cysts"]]
+position = Vector2(1124, 830)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cysts/Cyst9" unique_id=783617590]
+position = Vector2(0, -1.0000305)
+scale = Vector2(0.32, 0.32)
 shape = SubResource("RectangleShape2D_h31tl")
 
-[node name="Cyst" type="Sprite2D" parent="Cysts/Cyst9" unique_id=302700870]
+[node name="Cyst" type="Sprite2D" parent="Cysts/Cyst9" unique_id=526886977]
 texture = ExtResource("4_ai0ro")
 
-[node name="Cyst10" type="Area2D" parent="Cysts" unique_id=745034093 groups=["Cysts"]]
-position = Vector2(1420, 732)
+[node name="Sprite2D13" type="Sprite2D" parent="Cysts" unique_id=1677611032]
+position = Vector2(1702, 98)
+texture = ExtResource("10_13kqj")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cysts/Cyst10" unique_id=2003113641]
+[node name="Cyst13" type="Area2D" parent="Cysts" unique_id=406027557 groups=["Cysts"]]
+position = Vector2(1702, 98)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cysts/Cyst13" unique_id=789207316]
+position = Vector2(0, -1.0000305)
+scale = Vector2(0.32, 0.32)
 shape = SubResource("RectangleShape2D_h31tl")
 
-[node name="Cyst" type="Sprite2D" parent="Cysts/Cyst10" unique_id=908901826]
+[node name="Cyst" type="Sprite2D" parent="Cysts/Cyst13" unique_id=65467189]
 texture = ExtResource("4_ai0ro")
 
-[node name="Cyst11" type="Area2D" parent="Cysts" unique_id=1328533332 groups=["Cysts"]]
-position = Vector2(1323, 1034)
+[node name="Sprite2D10" type="Sprite2D" parent="Cysts" unique_id=1854598691]
+position = Vector2(1253, 791)
+texture = ExtResource("10_13kqj")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cysts/Cyst11" unique_id=1010369557]
+[node name="Cyst10" type="Area2D" parent="Cysts" unique_id=1017056923 groups=["Cysts"]]
+position = Vector2(1253, 791)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cysts/Cyst10" unique_id=126568555]
+position = Vector2(0, -1.0000305)
+scale = Vector2(0.32, 0.32)
 shape = SubResource("RectangleShape2D_h31tl")
 
-[node name="Cyst" type="Sprite2D" parent="Cysts/Cyst11" unique_id=930238410]
+[node name="Cyst" type="Sprite2D" parent="Cysts/Cyst10" unique_id=17190328]
 texture = ExtResource("4_ai0ro")
 
-[node name="Cyst12" type="Area2D" parent="Cysts" unique_id=2057974092 groups=["Cysts"]]
-position = Vector2(1179, 973)
+[node name="Sprite2D11" type="Sprite2D" parent="Cysts" unique_id=613035686]
+position = Vector2(1060, 955)
+texture = ExtResource("10_13kqj")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cysts/Cyst12" unique_id=930450651]
+[node name="Cyst11" type="Area2D" parent="Cysts" unique_id=667443521 groups=["Cysts"]]
+position = Vector2(1060, 955)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cysts/Cyst11" unique_id=929148949]
+position = Vector2(0, -1.0000305)
+scale = Vector2(0.32, 0.32)
 shape = SubResource("RectangleShape2D_h31tl")
 
-[node name="Cyst" type="Sprite2D" parent="Cysts/Cyst12" unique_id=1975618840]
+[node name="Cyst" type="Sprite2D" parent="Cysts/Cyst11" unique_id=295011039]
 texture = ExtResource("4_ai0ro")
 
-[connection signal="area_entered" from="Schyte" to="Schyte" method="_on_area_entered"]
+[node name="Sprite2D12" type="Sprite2D" parent="Cysts" unique_id=1055303852]
+position = Vector2(1350, 954)
+texture = ExtResource("10_13kqj")
+
+[node name="Cyst12" type="Area2D" parent="Cysts" unique_id=552621539 groups=["Cysts"]]
+position = Vector2(1350, 954)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cysts/Cyst12" unique_id=1158793530]
+position = Vector2(0, -1.0000305)
+scale = Vector2(0.32, 0.32)
+shape = SubResource("RectangleShape2D_h31tl")
+
+[node name="Cyst" type="Sprite2D" parent="Cysts/Cyst12" unique_id=1022749708]
+scale = Vector2(0.98587954, 0.98520327)
+texture = ExtResource("4_ai0ro")
+
+[node name="Schyte" type="Area2D" parent="." unique_id=1210850125]
+position = Vector2(129.00003, 309)
+scale = Vector2(0.105, 0.105)
+script = ExtResource("3_2vh35")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Schyte" unique_id=156445775]
+position = Vector2(-514.2861, -504.7619)
+rotation = 0.09769887
+scale = Vector2(52.216873, 78.3289)
+shape = SubResource("RectangleShape2D_13kqj")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Schyte" unique_id=239136018]
+position = Vector2(-238.09555, -866.6666)
+rotation = 1.0755373
+scale = Vector2(52.216873, 78.3289)
+shape = SubResource("RectangleShape2D_13kqj")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Schyte" unique_id=270370313]
+position = Vector2(114.285484, 685.7144)
+rotation = -0.4168514
+scale = Vector2(39.758457, 57.439484)
+shape = SubResource("RectangleShape2D_13kqj")
+
+[node name="Scythe" type="Sprite2D" parent="Schyte" unique_id=145813167]
+position = Vector2(-12.974976, 0)
+scale = Vector2(2.517302, 2.517302)
+texture = ExtResource("3_ai0ro")
+
 [connection signal="area_entered" from="LeechesJar" to="LeechesJar" method="_on_area_entered"]
 [connection signal="area_entered" from="Potion" to="Potion" method="_on_area_entered"]
+[connection signal="area_entered" from="Schyte" to="Schyte" method="_on_area_entered"]

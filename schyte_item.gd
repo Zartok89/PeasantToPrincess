@@ -4,7 +4,7 @@ var is_held := false
 var offset := Vector2.ZERO
 
 var hidden_count := 0
-const REQUIRED_HIDES := 12
+const REQUIRED_HIDES := 13
 const TARGET_GROUP := "Cysts"
 
 func _ready():
@@ -28,7 +28,6 @@ func _on_area_entered(area):
 		if area.visible:
 			area.visible = false
 			hidden_count += 1
-			print("Hidden cyst: ", area.name, " (count=", hidden_count, ")")
 			_check_trigger_next()
 
 func _check_trigger_next():

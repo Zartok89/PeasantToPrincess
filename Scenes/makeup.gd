@@ -6,10 +6,12 @@ var offset := Vector2.ZERO
 const TARGET_GROUP := "face"
 
 var nice_face: Node2D
+var nice_face2: Node2D
 
 func _ready():
 	set_process(true)
 	nice_face = get_node("/root/Phase3_Dressup/Character/Peasant1Nice") as Node2D
+	nice_face2 = get_node("/root/Phase3_Dressup/Character/Lips") as Node2D
 
 func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton:
@@ -33,6 +35,9 @@ func _on_area_entered(area):
 func _trigger_next_function():
 	if nice_face:
 		nice_face.visible = true
+		
+	if nice_face2:
+		nice_face2.visible = true
 		
 	self.visible = false
 	is_held = false

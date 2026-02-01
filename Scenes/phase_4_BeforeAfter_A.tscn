@@ -1,0 +1,299 @@
+[gd_scene format=3 uid="uid://6csnx3o5remu"]
+
+[ext_resource type="Texture2D" uid="uid://rxtg327lvccx" path="res://Assets/MainMenu/bg.png" id="1_8k6hl"]
+[ext_resource type="Texture2D" uid="uid://cdo0cg7ycxs44" path="res://Assets/BaseCharacter/body2.png" id="2_tqeh4"]
+[ext_resource type="Texture2D" uid="uid://bg7xn2vpy2hjy" path="res://Assets/Clothing/dress1shaded.png" id="3_smvuy"]
+[ext_resource type="Texture2D" uid="uid://btwggw3f7b2dl" path="res://Assets/Clothing/hair1.png" id="4_qgxfa"]
+[ext_resource type="Texture2D" uid="uid://mk84fpeaebfd" path="res://Assets/Clothing/crown1.png" id="5_brdru"]
+[ext_resource type="Texture2D" uid="uid://18mhuvippgwk" path="res://Assets/stretch_bench.png" id="6_3du4b"]
+[ext_resource type="Texture2D" uid="uid://buay0ppkl8sw" path="res://Assets/BaseCharacter/peasant1.png" id="7_f8f0k"]
+[ext_resource type="Script" uid="uid://c4b3ptcemdxnm" path="res://Scenes/cysts.gd" id="8_68302"]
+[ext_resource type="Texture2D" uid="uid://rjds2jyvordt" path="res://Assets/Plagues/wound1.png" id="9_7qd6j"]
+[ext_resource type="Texture2D" uid="uid://c4mj1enrq40en" path="res://Assets/Plagues/wound2.png" id="10_4lu72"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_do63o"]
+size = Vector2(76.5, 73.5)
+
+[node name="Phase3_Dressup" type="Node" unique_id=1334551469]
+
+[node name="Background" type="TextureRect" parent="." unique_id=45555657]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_8k6hl")
+
+[node name="StretchTable2" type="TextureRect" parent="Background" unique_id=1237522055]
+layout_mode = 0
+offset_left = 1297.0
+offset_top = 13.0
+offset_right = 1909.0
+offset_bottom = 1089.0
+texture = ExtResource("6_3du4b")
+
+[node name="Body2" type="Sprite2D" parent="." unique_id=1997237753]
+position = Vector2(1617.0001, 527)
+scale = Vector2(0.909811, 0.909811)
+texture = ExtResource("2_tqeh4")
+
+[node name="Dress1Shaded" type="Sprite2D" parent="Body2" unique_id=1429993301]
+position = Vector2(34, 8)
+scale = Vector2(0.79408956, 0.79408956)
+texture = ExtResource("3_smvuy")
+
+[node name="Hair1" type="Sprite2D" parent="Body2" unique_id=1333854066]
+position = Vector2(29.381958, -4.8970337)
+scale = Vector2(0.7673133, 0.7673133)
+texture = ExtResource("4_qgxfa")
+
+[node name="Crown1" type="Sprite2D" parent="Body2" unique_id=58167525]
+position = Vector2(33.05481, 17.139526)
+scale = Vector2(0.78834397, 0.78834397)
+texture = ExtResource("5_brdru")
+
+[node name="StretchTable" type="TextureRect" parent="." unique_id=1056947067]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -35.0
+offset_top = -1094.0
+offset_right = 630.0
+offset_bottom = 1.0
+grow_vertical = 0
+scale = Vector2(1.4352934, 1.0148406)
+texture = ExtResource("6_3du4b")
+
+[node name="Character2" type="Node2D" parent="." unique_id=1184938790]
+position = Vector2(24.999996, -7.0000076)
+scale = Vector2(0.27902895, 0.27902895)
+
+[node name="Peasant" type="Sprite2D" parent="Character2" unique_id=429414028 groups=["face"]]
+position = Vector2(1457.6888, 1946.2429)
+scale = Vector2(3.5198162, 3.5198162)
+texture = ExtResource("7_f8f0k")
+
+[node name="Cysts" type="Node" parent="." unique_id=1232561741]
+script = ExtResource("8_68302")
+
+[node name="Sprite2D" type="Sprite2D" parent="Cysts" unique_id=50309220]
+position = Vector2(641.298, 434.8181)
+scale = Vector2(0.73995566, 0.73995566)
+texture = ExtResource("9_7qd6j")
+
+[node name="Cyst" type="Area2D" parent="Cysts" unique_id=1230886163 groups=["Cysts"]]
+position = Vector2(641.298, 434.8181)
+scale = Vector2(0.73995566, 0.73995566)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cysts/Cyst" unique_id=1004552499]
+position = Vector2(0, -1.0000305)
+scale = Vector2(0.32, 0.32)
+shape = SubResource("RectangleShape2D_do63o")
+
+[node name="Cyst" type="Sprite2D" parent="Cysts/Cyst" unique_id=318265962]
+texture = ExtResource("10_4lu72")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Cysts" unique_id=1062715346]
+position = Vector2(468.298, 400.81808)
+scale = Vector2(0.73995566, 0.73995566)
+texture = ExtResource("9_7qd6j")
+
+[node name="Cyst2" type="Area2D" parent="Cysts" unique_id=765324875 groups=["Cysts"]]
+position = Vector2(468.298, 400.81808)
+scale = Vector2(0.73995566, 0.73995566)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cysts/Cyst2" unique_id=1750231238]
+position = Vector2(0, -1.0000305)
+scale = Vector2(0.32, 0.32)
+shape = SubResource("RectangleShape2D_do63o")
+
+[node name="Cyst" type="Sprite2D" parent="Cysts/Cyst2" unique_id=535470414]
+texture = ExtResource("10_4lu72")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Cysts" unique_id=1776469773]
+position = Vector2(385.29797, 408.81808)
+scale = Vector2(0.73995566, 0.73995566)
+texture = ExtResource("9_7qd6j")
+
+[node name="Cyst3" type="Area2D" parent="Cysts" unique_id=450643476 groups=["Cysts"]]
+position = Vector2(385.29797, 408.81808)
+scale = Vector2(0.73995566, 0.73995566)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cysts/Cyst3" unique_id=1613705926]
+position = Vector2(0, -1.0000305)
+scale = Vector2(0.32, 0.32)
+shape = SubResource("RectangleShape2D_do63o")
+
+[node name="Cyst" type="Sprite2D" parent="Cysts/Cyst3" unique_id=1677317020]
+texture = ExtResource("10_4lu72")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Cysts" unique_id=859766212]
+position = Vector2(296.298, 602.8181)
+scale = Vector2(0.7399558, 0.7399558)
+texture = ExtResource("9_7qd6j")
+
+[node name="Cyst4" type="Area2D" parent="Cysts" unique_id=9999115 groups=["Cysts"]]
+position = Vector2(296.298, 602.8181)
+scale = Vector2(0.7399558, 0.7399558)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cysts/Cyst4" unique_id=797730488]
+position = Vector2(0, -1.0000305)
+scale = Vector2(0.32, 0.32)
+shape = SubResource("RectangleShape2D_do63o")
+
+[node name="Cyst" type="Sprite2D" parent="Cysts/Cyst4" unique_id=21258866]
+texture = ExtResource("10_4lu72")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Cysts" unique_id=602947763]
+position = Vector2(177.298, 267.81808)
+scale = Vector2(0.7399558, 0.7399558)
+texture = ExtResource("9_7qd6j")
+
+[node name="Cyst5" type="Area2D" parent="Cysts" unique_id=1489907358 groups=["Cysts"]]
+position = Vector2(177.298, 267.81808)
+scale = Vector2(0.7399558, 0.7399558)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cysts/Cyst5" unique_id=932312085]
+position = Vector2(0, -1.0000305)
+scale = Vector2(0.32, 0.32)
+shape = SubResource("RectangleShape2D_do63o")
+
+[node name="Cyst" type="Sprite2D" parent="Cysts/Cyst5" unique_id=694228240]
+texture = ExtResource("10_4lu72")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Cysts" unique_id=240869710]
+position = Vector2(381.29797, 304.81808)
+scale = Vector2(0.73995566, 0.73995566)
+texture = ExtResource("9_7qd6j")
+
+[node name="Cyst6" type="Area2D" parent="Cysts" unique_id=1441770953 groups=["Cysts"]]
+position = Vector2(381.29797, 304.81808)
+scale = Vector2(0.73995566, 0.73995566)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cysts/Cyst6" unique_id=1938073015]
+position = Vector2(0, -1.0000305)
+scale = Vector2(0.32, 0.32)
+shape = SubResource("RectangleShape2D_do63o")
+
+[node name="Cyst" type="Sprite2D" parent="Cysts/Cyst6" unique_id=847270574]
+texture = ExtResource("10_4lu72")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Cysts" unique_id=1992802550]
+position = Vector2(531.298, 608.8181)
+scale = Vector2(0.73995566, 0.73995566)
+texture = ExtResource("9_7qd6j")
+
+[node name="Cyst7" type="Area2D" parent="Cysts" unique_id=1981848591 groups=["Cysts"]]
+position = Vector2(531.298, 608.8181)
+scale = Vector2(0.73995566, 0.73995566)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cysts/Cyst7" unique_id=1104539175]
+position = Vector2(0, -1.0000305)
+scale = Vector2(0.32, 0.32)
+shape = SubResource("RectangleShape2D_do63o")
+
+[node name="Cyst" type="Sprite2D" parent="Cysts/Cyst7" unique_id=1738395555]
+texture = ExtResource("10_4lu72")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Cysts" unique_id=1559139220]
+position = Vector2(464, 625)
+scale = Vector2(0.7399557, 0.7399557)
+texture = ExtResource("9_7qd6j")
+
+[node name="Cyst8" type="Area2D" parent="Cysts" unique_id=966039931 groups=["Cysts"]]
+position = Vector2(464, 625)
+scale = Vector2(0.7399557, 0.7399557)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cysts/Cyst8" unique_id=73676353]
+position = Vector2(0, -1.0000305)
+scale = Vector2(0.32, 0.32)
+shape = SubResource("RectangleShape2D_do63o")
+
+[node name="Cyst" type="Sprite2D" parent="Cysts/Cyst8" unique_id=556847076]
+texture = ExtResource("10_4lu72")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Cysts" unique_id=1913635924]
+position = Vector2(421.298, 790.8181)
+scale = Vector2(0.7399557, 0.7399557)
+texture = ExtResource("9_7qd6j")
+
+[node name="Cyst9" type="Area2D" parent="Cysts" unique_id=697346297 groups=["Cysts"]]
+position = Vector2(421.298, 790.8181)
+scale = Vector2(0.7399557, 0.7399557)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cysts/Cyst9" unique_id=1278730719]
+position = Vector2(0, -1.0000305)
+scale = Vector2(0.32, 0.32)
+shape = SubResource("RectangleShape2D_do63o")
+
+[node name="Cyst" type="Sprite2D" parent="Cysts/Cyst9" unique_id=340765209]
+texture = ExtResource("10_4lu72")
+
+[node name="Sprite2D13" type="Sprite2D" parent="Cysts" unique_id=1495107861]
+position = Vector2(735.298, 132.81808)
+scale = Vector2(0.7399556, 0.7399556)
+texture = ExtResource("9_7qd6j")
+
+[node name="Cyst13" type="Area2D" parent="Cysts" unique_id=602226167 groups=["Cysts"]]
+position = Vector2(735.298, 132.81808)
+scale = Vector2(0.7399556, 0.7399556)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cysts/Cyst13" unique_id=866055007]
+position = Vector2(0, -1.0000305)
+scale = Vector2(0.32, 0.32)
+shape = SubResource("RectangleShape2D_do63o")
+
+[node name="Cyst" type="Sprite2D" parent="Cysts/Cyst13" unique_id=2019670969]
+texture = ExtResource("10_4lu72")
+
+[node name="Sprite2D10" type="Sprite2D" parent="Cysts" unique_id=130077260]
+position = Vector2(550.298, 751.8181)
+scale = Vector2(0.7399558, 0.7399558)
+texture = ExtResource("9_7qd6j")
+
+[node name="Cyst10" type="Area2D" parent="Cysts" unique_id=611138392 groups=["Cysts"]]
+position = Vector2(550.298, 751.8181)
+scale = Vector2(0.7399558, 0.7399558)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cysts/Cyst10" unique_id=240316664]
+position = Vector2(0, -1.0000305)
+scale = Vector2(0.32, 0.32)
+shape = SubResource("RectangleShape2D_do63o")
+
+[node name="Cyst" type="Sprite2D" parent="Cysts/Cyst10" unique_id=2117519643]
+texture = ExtResource("10_4lu72")
+
+[node name="Sprite2D11" type="Sprite2D" parent="Cysts" unique_id=2123893003]
+position = Vector2(357.298, 915.8181)
+scale = Vector2(0.7399558, 0.7399558)
+texture = ExtResource("9_7qd6j")
+
+[node name="Cyst11" type="Area2D" parent="Cysts" unique_id=1005780529 groups=["Cysts"]]
+position = Vector2(357.298, 915.8181)
+scale = Vector2(0.7399558, 0.7399558)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cysts/Cyst11" unique_id=1464551604]
+position = Vector2(0, -1.0000305)
+scale = Vector2(0.32, 0.32)
+shape = SubResource("RectangleShape2D_do63o")
+
+[node name="Cyst" type="Sprite2D" parent="Cysts/Cyst11" unique_id=882181376]
+texture = ExtResource("10_4lu72")
+
+[node name="Sprite2D12" type="Sprite2D" parent="Cysts" unique_id=1479759688]
+position = Vector2(504.29803, 932.8181)
+scale = Vector2(0.7399557, 0.7399557)
+texture = ExtResource("9_7qd6j")
+
+[node name="Cyst12" type="Area2D" parent="Cysts" unique_id=1441373320 groups=["Cysts"]]
+position = Vector2(504.29803, 932.8181)
+scale = Vector2(0.7399557, 0.7399557)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cysts/Cyst12" unique_id=2106935211]
+position = Vector2(0, -1.0000305)
+scale = Vector2(0.32, 0.32)
+shape = SubResource("RectangleShape2D_do63o")
+
+[node name="Cyst" type="Sprite2D" parent="Cysts/Cyst12" unique_id=1550320747]
+scale = Vector2(0.98587954, 0.98520327)
+texture = ExtResource("10_4lu72")

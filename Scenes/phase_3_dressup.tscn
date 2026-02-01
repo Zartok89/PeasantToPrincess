@@ -3,10 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://rxtg327lvccx" path="res://Assets/MainMenu/bg.png" id="1_kegg6"]
 [ext_resource type="Texture2D" uid="uid://hysbvfp0c8wn" path="res://Assets/BaseCharacter/full_body.png" id="3_2vh35"]
 [ext_resource type="Texture2D" uid="uid://18mhuvippgwk" path="res://Assets/stretch_bench.png" id="3_qsbxe"]
-[ext_resource type="Texture2D" uid="uid://cc275aqqhansk" path="res://Assets/BaseCharacter/peasant1_nice.png" id="5_s16a6"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bscsq"]
-size = Vector2(689.493, 861.8663)
 
 [node name="Phase3_Dressup" type="Node" unique_id=1334551469]
 
@@ -23,33 +19,19 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 1277.0
-offset_top = -106.00001
+offset_top = -4.0
 offset_right = 1277.0
-offset_bottom = -106.0
+offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.31242058, 1.1798767)
+scale = Vector2(0.26596722, 1.0044426)
 texture = ExtResource("3_qsbxe")
 
 [node name="Character" type="Node2D" parent="." unique_id=485698924]
-position = Vector2(708, 63)
-scale = Vector2(0.20225139, 0.20225139)
+position = Vector2(708, 165)
+scale = Vector2(0.17217892, 0.17217892)
 
 [node name="Peasant" type="Sprite2D" parent="Character" unique_id=1725946111 groups=["face"]]
-position = Vector2(4351.021, 2304.0632)
+position = Vector2(4884.454, 2305.7415)
 scale = Vector2(5.910613, 5.910613)
 texture = ExtResource("3_2vh35")
-
-[node name="Peasant1Nice" type="Sprite2D" parent="Character" unique_id=1386077922 groups=["niceface"]]
-visible = false
-position = Vector2(1305.3059, 1112.4769)
-scale = Vector2(5.852516, 5.896535)
-texture = ExtResource("5_s16a6")
-
-[node name="Area2D" type="Area2D" parent="Character" unique_id=188009309 groups=["face"]]
-position = Vector2(14.832995, 2195.2878)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Character/Area2D" unique_id=1491269843]
-position = Vector2(1282.158, -841.73895)
-scale = Vector2(0.20000002, 0.20000002)
-shape = SubResource("RectangleShape2D_bscsq")

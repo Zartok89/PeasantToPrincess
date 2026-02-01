@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://18mhuvippgwk" path="res://Assets/stretch_bench.png" id="3_l0uac"]
 [ext_resource type="Texture2D" uid="uid://5w4l5mg7a4db" path="res://Assets/Tools/torturemaskshaded.png" id="4_bscsq"]
 [ext_resource type="Texture2D" uid="uid://cc275aqqhansk" path="res://Assets/BaseCharacter/peasant1_nice.png" id="4_tqory"]
+[ext_resource type="Texture2D" uid="uid://wjiqacx82s57" path="res://Assets/BaseCharacter/lips.png" id="6_l0uac"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bscsq"]
 size = Vector2(689.493, 861.8663)
@@ -39,16 +40,16 @@ texture = ExtResource("2_qajad")
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 382.0
+offset_left = 804.0
 offset_top = -1218.0
-offset_right = 1047.0
+offset_right = 1469.0
 offset_bottom = -123.0
 grow_vertical = 0
 scale = Vector2(1.8115492, 1.3858279)
 texture = ExtResource("3_l0uac")
 
 [node name="Character" type="Node2D" parent="." unique_id=485698924]
-position = Vector2(708, 63)
+position = Vector2(1130, 63)
 scale = Vector2(0.20225139, 0.20225139)
 
 [node name="Peasant" type="Sprite2D" parent="Character" unique_id=1725946111 groups=["face"]]
@@ -62,6 +63,12 @@ position = Vector2(1305.3059, 1112.4769)
 scale = Vector2(5.852516, 5.896535)
 texture = ExtResource("4_tqory")
 
+[node name="Lips" type="Sprite2D" parent="Character" unique_id=313337573 groups=["niceface"]]
+visible = false
+position = Vector2(1295.4177, 1844.2393)
+scale = Vector2(6.2209573, 5.1472945)
+texture = ExtResource("6_l0uac")
+
 [node name="Area2D" type="Area2D" parent="Character" unique_id=188009309 groups=["face"]]
 position = Vector2(14.832995, 2195.2878)
 
@@ -71,7 +78,7 @@ scale = Vector2(0.20000002, 0.20000002)
 shape = SubResource("RectangleShape2D_bscsq")
 
 [node name="Makeup" type="Area2D" parent="." unique_id=1210850125]
-position = Vector2(297, 331.99997)
+position = Vector2(330, 222.99997)
 scale = Vector2(0.14601523, 0.1495703)
 script = ExtResource("3_bscsq")
 
@@ -84,14 +91,4 @@ texture = ExtResource("4_bscsq")
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_0ca14")
 
-[node name="Makeup2" type="Area2D" parent="." unique_id=1593685305]
-position = Vector2(972.00006, 281)
-scale = Vector2(0.021320447, 0.022371275)
-script = ExtResource("3_bscsq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Makeup2" unique_id=447066351]
-scale = Vector2(0.99999994, 0.99999994)
-shape = SubResource("RectangleShape2D_0ca14")
-
 [connection signal="area_entered" from="Makeup" to="Makeup" method="_on_area_entered"]
-[connection signal="area_entered" from="Makeup2" to="Makeup2" method="_on_area_entered"]
